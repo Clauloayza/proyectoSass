@@ -120,9 +120,7 @@ const App = ({players, selectedPlayerIndex}) => {
 		</div>
 	);
 }
-
 const mapToProps = ({players, selectedPlayerIndex}) => ({players, selectedPlayerIndex});
-
 export default connect(mapToProps)(App);
 
 
