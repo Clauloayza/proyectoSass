@@ -123,4 +123,4 @@ const App = ({players, selectedPlayerIndex}) => {
 const mapToProps = ({players, selectedPlayerIndex}) => ({players, selectedPlayerIndex});
 export default connect(mapToProps)(App);
 
-
+//redux
