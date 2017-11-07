@@ -1,0 +1,20 @@
+
+.stats{
+    margin-top: 0;
+    font-weight: normal;
+        td:first-child{
+            text-align: right;
+            font-weight: normal;
+            letter-spacing: 2px;
+            color: $colorStats;
+            font-size: .7em;
+            font-weight: bold;
+        }
+        td:last-child{
+            text-align: left;
+        }
+}
+
+.header .stats{
+    width: 170px;
+}

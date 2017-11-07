@@ -1,0 +1,51 @@
+//Mixins 
+@mixin counterBlock($background){
+    background: $background;
+    cursor: pointer;
+}
+@mixin backgroundCounter($bgcounter){
+    background: $bgcounter;
+}
+
+.counter{
+    display: flex;
+        .counter-action{
+            border: none;
+            font-weight: 800;
+            color: $color;
+            display: block;
+            padding: 20px 20px;
+            cursor: pointer;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+        }
+        .counter-action.increment{
+            @include backgroundCounter(#66BB6A);
+
+                //SCSS Mixins
+                .counter-action.increment:hover{
+                    @include counterBlock(#549d59);
+                }
+        }
+        .counter-action.decrement{
+            @include backgroundCounter(#ef5350);
+            padding-right: 24px;
+            padding-left: 24px;
+
+                //SCSS Mixins
+                .counter-action.decrement:hover{
+                    @include counterBlock(#c44442);
+                }
+        }
+        .counter-score{
+            flex-grow: 1;
+            background: #2b2b2b;
+            color: $color;
+            text-align: center;
+            font-family: $font;
+            padding: 10px;
+            font-size: 1.3em;
+        }
+}
